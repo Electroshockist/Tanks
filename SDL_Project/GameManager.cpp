@@ -8,7 +8,8 @@
 
 #include <iostream>
 
-GameManager::GameManager() {	
+GameManager::GameManager() {
+	windowName = "Test";
 	timer = nullptr;
 	isRunning = true;
 	currentScene = nullptr;
@@ -19,7 +20,7 @@ GameManager::GameManager() {
 bool GameManager::OnCreate() {
 	const int SCREEN_WIDTH = 1024;
 	const int SCREEN_HEIGHT = 500;
-	ptr = new Window(SCREEN_WIDTH, SCREEN_HEIGHT, "");
+	ptr = new Window(SCREEN_WIDTH, SCREEN_HEIGHT, windowName);
 	if (ptr == nullptr) {
 		OnDestroy();
 		return false;
@@ -35,6 +36,7 @@ bool GameManager::OnCreate() {
 		return false;
 	}
 
+	windowName = "Assignment 1";
 	currentScene = new Assignment1(ptr->GetSDL_Window());
 	if (currentScene == nullptr) {
 		OnDestroy();
@@ -71,21 +73,24 @@ void GameManager::Run() {
 					currentScene->OnDestroy();
 					delete currentScene;
 					currentScene = new Assignment1(ptr->GetSDL_Window());
-					ptr->windowName = "Assignment 1";
+					windowName = "Assignment 1";
+					cout << ptr->windowName;
 					currentScene->OnCreate();
 				}
 				if (event.key.keysym.sym == SDLK_F2) {
 					currentScene->OnDestroy();
 					delete currentScene;
 					currentScene = new Assignment2(ptr->GetSDL_Window());
-					ptr->windowName = "Assignment 2";
+					windowName = "Assignment 2";
+					cout << ptr->windowName;
 					currentScene->OnCreate();
 				}
 				if (event.key.keysym.sym == SDLK_F3) {
 					currentScene->OnDestroy();
 					delete currentScene;
 					currentScene = new Assignment3(ptr->GetSDL_Window());
-					ptr->windowName = "Assignment 3";
+					windowName = "Assignment 3";
+					cout << ptr->windowName;
 					currentScene->OnCreate();
 				}
 				if (event.key.keysym.sym == SDLK_SPACE) {

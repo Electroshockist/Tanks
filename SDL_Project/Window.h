@@ -5,7 +5,7 @@ private:
 	struct SDL_Surface* screenSurface;
 	int width, height;
 	
-public:
+public:	
 	char *windowName;
 	Window(int width_, int height_, char * windowName_ );
 	~Window();

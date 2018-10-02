@@ -21,6 +21,7 @@ private:
 	Scene *currentScene;
 
 public:
+	char *windowName;
 	GameManager();
 	~GameManager();
 	bool OnCreate();
