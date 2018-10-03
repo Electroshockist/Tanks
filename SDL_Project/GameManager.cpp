@@ -1,26 +1,22 @@
 #include "GameManager.h"
 #include "Window.h"
 #include "Timer.h"
-#include "Assignment1.h"
-#include "Assignment2.h"
-#include "Assignment3.h"
 #include "SDL.h"
+#include "Assignment1.h"
 
 #include <iostream>
 
 GameManager::GameManager() {
-	windowName = "Test";
 	timer = nullptr;
 	isRunning = true;
 	currentScene = nullptr;
 }
 
-
 /// In this OnCreate() method, fuction, subroutine, whatever the word, 
 bool GameManager::OnCreate() {
 	const int SCREEN_WIDTH = 1024;
 	const int SCREEN_HEIGHT = 500;
-	ptr = new Window(SCREEN_WIDTH, SCREEN_HEIGHT, windowName);
+	ptr = new Window(SCREEN_WIDTH, SCREEN_HEIGHT);
 	if (ptr == nullptr) {
 		OnDestroy();
 		return false;
@@ -36,7 +32,7 @@ bool GameManager::OnCreate() {
 		return false;
 	}
 
-	windowName = "Assignment 1";
+	windowName = "";
 	currentScene = new Assignment1(ptr->GetSDL_Window());
 	if (currentScene == nullptr) {
 		OnDestroy();
@@ -62,43 +58,23 @@ void GameManager::Run() {
             currentScene->HandleEvents(event);
 
 			switch (event.type) {
-			case SDL_QUIT:
-				isRunning = false;
-				break;
-			case SDL_KEYDOWN:
-				if (event.key.keysym.sym == SDLK_ESCAPE) {
+				case SDL_QUIT:
 					isRunning = false;
-				}
-				if (event.key.keysym.sym == SDLK_F1) {
-					currentScene->OnDestroy();
-					delete currentScene;
-					currentScene = new Assignment1(ptr->GetSDL_Window());
-					windowName = "Assignment 1";
-					cout << ptr->windowName;
-					currentScene->OnCreate();
-				}
-				if (event.key.keysym.sym == SDLK_F2) {
-					currentScene->OnDestroy();
-					delete currentScene;
-					currentScene = new Assignment2(ptr->GetSDL_Window());
-					windowName = "Assignment 2";
-					cout << ptr->windowName;
-					currentScene->OnCreate();
-				}
-				if (event.key.keysym.sym == SDLK_F3) {
-					currentScene->OnDestroy();
-					delete currentScene;
-					currentScene = new Assignment3(ptr->GetSDL_Window());
-					windowName = "Assignment 3";
-					cout << ptr->windowName;
-					currentScene->OnCreate();
-				}
-				if (event.key.keysym.sym == SDLK_SPACE) {
-					start = true;
-				}
-				break;
-			default:
-				break;
+					break;
+				case SDL_KEYDOWN:
+					if (event.key.keysym.sym == SDLK_ESCAPE) {
+						isRunning = false;
+					}
+					if (event.key.keysym.sym == SDLK_SPACE) {
+						start = true;
+					}
+					
+					std::cout << windowName;
+					SDL_SetWindowTitle(ptr->GetSDL_Window(), windowName);
+					break;
+
+				default:
+					break;
 			}
         }
 

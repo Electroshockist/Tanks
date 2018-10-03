@@ -12,8 +12,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Assignment1.cpp" />
-    <ClCompile Include="Assignment2.cpp" />
-    <ClCompile Include="Assignment3.cpp" />
     <ClCompile Include="Body.cpp" />
     <ClCompile Include="Collider.cpp" />
     <ClCompile Include="GameManager.cpp" />
@@ -26,8 +24,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Assignment1.h" />
-    <ClInclude Include="Assignment2.h" />
-    <ClInclude Include="Assignment3.h" />
     <ClInclude Include="Body.h" />
     <ClInclude Include="Collider.h" />
     <ClInclude Include="GameManager.h" />

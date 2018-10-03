@@ -20,8 +20,8 @@ private:
 	SDL_Surface *bodyImage;
 	
 public:
-	Body(char* imageName, float mass_, Vec3 pos_, float gravity_, bool ground_, bool isStatic_);
-	Body(char* imageName ,float mass_, Vec3 pos_, Vec3 vel_, Vec3 accel_, float gravity_, bool ground_, bool isStatic_);
+	Body(char* imageName, float mass_, Vec3 pos_, float gravity_);
+	Body(char* imageName ,float mass_, Vec3 pos_, Vec3 vel_, Vec3 accel_, float gravity_);
 	~Body();
 	void Update(const float deltaTime, const float gravity);
 	void ApplyForce(Vec3 force);

@@ -1,12 +1,4 @@
-﻿  GameManager.cpp
-c:\users\erico\files\tanks\sdl_project\assignment2.h(19): warning C4099: 'MATH::Vec3': type name first seen using 'struct' now seen using 'class'
-  c:\users\erico\files\tanks\sdl_project\vector.h(28): note: see declaration of 'MATH::Vec3'
-c:\users\erico\files\tanks\sdl_project\assignment2.h(20): warning C4099: 'MATH::Vec3': type name first seen using 'struct' now seen using 'class'
-  c:\users\erico\files\tanks\sdl_project\vector.h(28): note: see declaration of 'MATH::Vec3'
-c:\users\erico\files\tanks\sdl_project\assignment3.h(14): warning C4005: 'NUM_BODIES': macro redefinition
-  c:\users\erico\files\tanks\sdl_project\assignment1.h(12): note: see previous definition of 'NUM_BODIES'
-  Generating Code...
-  Compiling...
-  Window.cpp
-  Generating Code...
-  SDL_Project.vcxproj -> C:\Users\erico\Files\Tanks\Debug\SDL_Project.exe
+﻿  Assignment1.cpp
+c:\users\erico\desktop\assignment 1\sdl_project\assignment1.cpp(80): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\erico\desktop\assignment 1\sdl_project\assignment1.cpp(81): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  SDL_Project.vcxproj -> C:\Users\erico\Desktop\Assignment 1\Debug\SDL_Project.exe

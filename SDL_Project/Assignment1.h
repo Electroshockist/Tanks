@@ -9,12 +9,13 @@
 
 using namespace MATH;
 using namespace std;
-#define NUM_BODIES 3
+#define NUM_BODIES 1
 
 class Assignment1 : public Scene {
 private:
 	SDL_Window *window;
 	Matrix4 projectionMatrix;
+	Matrix4 invMat;
 	class Body* bodies[NUM_BODIES];
 	float elapsedTime;
 	unsigned long totalFrameCount;

@@ -3,8 +3,7 @@
 #include <iostream> /// Umer likes this over printf() - too bad
 using namespace std;
 
-Window::Window(int width_, int height_, char * windowName_) {
-	windowName = windowName_;
+Window::Window(int width_, int height_) {
 	screenSurface = nullptr;
 	window = nullptr;
 	width = width_;
@@ -17,7 +16,7 @@ bool Window::OnCreate(){
 		return false;
 	}
 
-	window = SDL_CreateWindow(windowName, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, width, height, SDL_WINDOW_SHOWN);
+	window = SDL_CreateWindow("New Window", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, width, height, SDL_WINDOW_SHOWN);
 	if (window == nullptr) {
 		cout << "SDL_Error: " << SDL_GetError() << std::endl;
 		return false;

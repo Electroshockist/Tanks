@@ -6,8 +6,7 @@ private:
 	int width, height;
 	
 public:	
-	char *windowName;
-	Window(int width_, int height_, char * windowName_ );
+	Window(int width_, int height_);
 	~Window();
 	bool OnCreate();
 	void OnDestroy();
