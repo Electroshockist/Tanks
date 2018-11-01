@@ -1,4 +1,0 @@
-﻿  Assignment1.cpp
-c:\users\erico\desktop\assignment 1\sdl_project\assignment1.cpp(80): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-c:\users\erico\desktop\assignment 1\sdl_project\assignment1.cpp(81): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-  SDL_Project.vcxproj -> C:\Users\erico\Desktop\Assignment 1\Debug\SDL_Project.exe
